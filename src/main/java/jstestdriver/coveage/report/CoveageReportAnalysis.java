@@ -34,8 +34,6 @@ public class CoveageReportAnalysis {
 			for (int j = 0; j < datas.size(); j++) {
 				Pattern pattern = Pattern.compile(excludes[i]);
 				if (pattern.matcher(datas.get(j).getFile()).find()) {
-					System.out.print(datas.get(j).getFile()
-							+ " exclude from report;");
 					datas.remove(j);
 				}
 			}

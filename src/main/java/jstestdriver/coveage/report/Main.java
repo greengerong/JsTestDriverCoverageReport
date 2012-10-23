@@ -7,7 +7,6 @@ public class Main {
 		String coverageFile = "C:\\Users\\wolf\\Desktop\\jstdcoverage.txt";
 		String outPutFile = "C:\\Users\\wolf\\Desktop\\Green.JsTestDriver.Coveage.Report\\coverage.data.js";
 		int limit = 60;
-		// String[] excludes = new String[] { ".*test1\\.js" };
 		String[] excludes = null;
 
 		CoveageReportAnalysis coveageReportAnalysis = new CoveageReportAnalysis(
