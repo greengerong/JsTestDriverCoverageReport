@@ -21,8 +21,20 @@ public class CoveageReportAnalysis {
 		List<String[]> splitFile = splitFile(lines);
 		List<CoverageData> datas = getAllCoverageData(splitFile);
 		exculdesFiles(datas, excludes);
-		String json = toJson(datas);
-		writeCoverageDataFile(outPutFile, json, limit);
+		writeCoverageDataFile(outPutFile, toJson(datas), limit);
+		assertBuild(datas, limit);
+	}
+
+	public void assertBuild(List<CoverageData> datas, int limit)
+			throws Exception {
+		double rate = this.getPackageCoverageRate(datas);
+		if (rate < limit) {
+			String message = String
+					.format("JavaScipt coverage is only %s%% on your project.It is less than requestment %s%%¡£ ",
+							rate, limit);
+			System.out.println(message);
+			throw new Exception(message);
+		}
 	}
 
 	private void exculdesFiles(List<CoverageData> datas, String[] excludes) {
@@ -109,5 +121,15 @@ public class CoveageReportAnalysis {
 	public String toJson(List<CoverageData> list) throws JSONException {
 		JSONArray jsonObject = new JSONArray(list);
 		return jsonObject.toString();
+	}
+
+	public double getPackageCoverageRate(List<CoverageData> datas) {
+		int lineCount = 0;
+		int hitCount = 0;
+		for (CoverageData data : datas) {
+			lineCount += data.getLineCount();
+			hitCount += data.getHitCount();
+		}
+		return hitCount * 1.0 / lineCount * 100;
 	}
 }

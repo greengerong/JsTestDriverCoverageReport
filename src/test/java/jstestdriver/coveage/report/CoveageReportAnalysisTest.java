@@ -1,18 +1,16 @@
 package jstestdriver.coveage.report;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jstestdriver.coveage.report.CoveageReportAnalysis;
-import jstestdriver.coveage.report.CoverageData;
-import jstestdriver.coveage.report.CoverageLine;
-import jstestdriver.coveage.report.FileHelper;
 import junit.framework.Assert;
 
 import org.json.JSONException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CoveageReportAnalysisTest {
@@ -26,6 +24,7 @@ public class CoveageReportAnalysisTest {
 	}
 
 	@Test
+	@Ignore
 	public void test() throws Exception {
 		coveageReportAnalysis.execute("fileCoverage2.dat", "outputfile.js",
 				new String[] { "\\w*2\\w*.js" }, 0);
@@ -72,18 +71,53 @@ public class CoveageReportAnalysisTest {
 	@Test
 	public void should_covert_CoverageData_object_to_json_()
 			throws JSONException {
+		List<CoverageData> list = new ArrayList<CoverageData>();
+		list.add(getCoverageData("coverage.data.js"));
+		String json = coveageReportAnalysis.toJson(list);
+		Assert.assertEquals(
+				"[{\"hitCount\":0,\"file\":\"coverage.data.js\",\"lineCount\":1,\"lines\":[{\"hit\":0,\"beHit\":false,\"line\":1}]}]",
+				json);
+	}
+
+	@Test
+	public void should_get_right_pack_coverage_rate() {
+		List<CoverageData> datas = new ArrayList<CoverageData>();
+		CoverageData coverageData1 = getCoverageData("coverage.data.js");
+		CoverageData coverageData2 = getCoverageData("coverage.data2.js");
+		coverageData2.getLines().get(0).setHit(1);
+		datas.addAll(Arrays.asList(coverageData1, coverageData2));
+		double rate = coveageReportAnalysis.getPackageCoverageRate(datas);
+		Assert.assertEquals(rate, 50.0);
+	}
+
+	@Test
+	public void should_no_exception_when_build_scuess() throws Exception {
+		List<CoverageData> datas = new ArrayList<CoverageData>();
+		CoverageData coverageData1 = getCoverageData("coverage.data.js");
+		CoverageData coverageData2 = getCoverageData("coverage.data2.js");
+		coverageData2.getLines().get(0).setHit(1);
+		datas.addAll(Arrays.asList(coverageData1, coverageData2));
+		coveageReportAnalysis.assertBuild(datas, 30);
+	}
+
+	@Test(expected = Exception.class)
+	public void should_exception_when_build_failed() throws Exception {
+		List<CoverageData> datas = new ArrayList<CoverageData>();
+		CoverageData coverageData1 = getCoverageData("coverage.data.js");
+		CoverageData coverageData2 = getCoverageData("coverage.data2.js");
+		coverageData2.getLines().get(0).setHit(1);
+		datas.addAll(Arrays.asList(coverageData1, coverageData2));
+		coveageReportAnalysis.assertBuild(datas, 60);
+	}
+
+	private CoverageData getCoverageData(String file) {
 		CoverageData coverageData = new CoverageData();
-		coverageData.setFile("coverage.data.js");
+		coverageData.setFile(file);
 		CoverageLine coverageLine = new CoverageLine();
 		coverageLine.setHit(0);
 		coverageLine.setLine(1);
 		coverageData.getLines().add(coverageLine);
-		List<CoverageData> list = new ArrayList<CoverageData>();
-		list.add(coverageData);
-		String json = coveageReportAnalysis.toJson(list);
-		Assert.assertEquals(
-				"[{\"file\":\"coverage.data.js\",\"lines\":[{\"hit\":0,\"line\":1}]}]",
-				json);
+		return coverageData;
 	}
 
 	private List<String> toList(String[] lines) {

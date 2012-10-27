@@ -52,4 +52,17 @@ public class CoverageData {
 		return this.file.hashCode();
 	}
 
+	public int getLineCount() {
+		return this.lines.size();
+	}
+
+	public int getHitCount() {
+		int hit = 0;
+		for (CoverageLine line : lines) {
+			if (line.isBeHit()) {
+				hit++;
+			}
+		}
+		return hit;
+	}
 }

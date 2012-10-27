@@ -20,4 +20,8 @@ public class CoverageLine {
 		this.hit = hit;
 	}
 
+	public boolean isBeHit() {
+		return hit > 0;
+	}
+
 }
