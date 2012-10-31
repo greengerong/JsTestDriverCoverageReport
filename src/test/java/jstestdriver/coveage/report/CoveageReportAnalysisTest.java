@@ -10,7 +10,6 @@ import junit.framework.Assert;
 
 import org.json.JSONException;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class CoveageReportAnalysisTest {
@@ -24,19 +23,21 @@ public class CoveageReportAnalysisTest {
 	}
 
 	@Test
-	@Ignore
 	public void test() throws Exception {
 		coveageReportAnalysis.execute("fileCoverage2.dat", "outputfile.js",
 				new String[] { "\\w*2\\w*.js" }, 0);
 		String output = this.fileHelper.ReadLines("outputfile.js")[0];
 		// System.out.print(output);
 		Assert.assertEquals(
-				"window.coverageData =[{\"file\":\"coverage.data.js\",\"codes\":[\"/*Created by JetBrains RubyMine.*/\""
-						+ ",\"window.coverageData = [\",\"    {\",\"        file:\\\"src/spec1.js\\\", coverage:[\",\"       "
-						+ "{line:2, hit:3},\",\"        {line:4, hit:1},\",\"        {line:12, hit:0}\",\"    ],"
-						+ " codes:[\",\"         \\\"/** Created by JetBrains RubyMine.*/\\\",\",\"    ]\",\"    }\",\"]"
-						+ ";\",\"window.coverageLimteRate = 50;\"],\"lines\":[{\"hit\":1,\"line\":1},{\"hit\":0,\"line\":3},"
-						+ "{\"hit\":3,\"line\":4},{\"hit\":1,\"line\":8},{\"hit\":0,\"line\":11}]}];"
+				"window.coverageData =[{\"hitCount\":3,\"file\":\"coverage.data.js\","
+						+ "\"lineCount\":5,\"codes\":[\"/*Created by JetBrains RubyMine.*/\",\"window."
+						+ "coverageData = [\",\"    {\",\"        file:\\\"src/spec1.js\\\", coverage:[\",\" "
+						+ "      {line:2, hit:3},\",\"        {line:4, hit:1},\",\"    "
+						+ "    {line:12, hit:0}\",\"    ], codes:[\",\"        "
+						+ " \\\"/** Created by JetBrains RubyMine.*/\\\",\",\"    ]\",\"    }\",\"];\","
+						+ "\"window.coverageLimteRate = 50;\"],\"lines\":[{\"hit\":1,\"beHit\":true,\"line\":1},"
+						+ "{\"hit\":0,\"beHit\":false,\"line\":3},{\"hit\":3,\"beHit\":true,\"line\":4},{\"hit\":1,"
+						+ "\"beHit\":true,\"line\":8},{\"hit\":0,\"beHit\":false,\"line\":11}]}];"
 						+ "window.coverageLimteRate = 0;", output);
 	}
 
