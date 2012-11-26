@@ -30,7 +30,7 @@ public class CoveageReportAnalysis {
 		double rate = this.getPackageCoverageRate(datas);
 		if (rate < limit) {
 			String message = String
-					.format("JavaScipt coverage is only %s%% on your project.It is less than requestment %s%%¡£ ",
+					.format("Total javaScipt coverage is only %s%% on your project. It is less than requestment %s%%¡£ ",
 							rate, limit);
 			System.out.println(message);
 			throw new Exception(message);

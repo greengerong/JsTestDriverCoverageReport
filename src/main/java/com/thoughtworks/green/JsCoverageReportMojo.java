@@ -60,16 +60,22 @@ public class JsCoverageReportMojo extends AbstractMojo {
 	private String fileName = "coverage.data.js";;
 
 	public void execute() throws MojoExecutionException {
+		String outPutFile;
 		try {
-			String outPutFile = outputDirectory + File.pathSeparator + fileName;
+			System.out.print("JsCoverageReport maven execute:.");
+
+			outPutFile = outputDirectory + File.pathSeparator + fileName;
 			CoveageReportAnalysis coveageReportAnalysis = new CoveageReportAnalysis(
 					new DefaultFileHelper());
 			coveageReportAnalysis.execute(coverageFile, outPutFile, excludes,
 					limit);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new MojoExecutionException(e.getMessage());
 		}
+		System.out.print(String.format("%s already finished(%s).", fileName,
+				outPutFile));
 
 	}
 }
