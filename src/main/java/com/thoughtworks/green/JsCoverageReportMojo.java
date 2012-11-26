@@ -64,7 +64,7 @@ public class JsCoverageReportMojo extends AbstractMojo {
 		try {
 			System.out.print("JsCoverageReport maven execute:.");
 
-			outPutFile = outputDirectory + File.pathSeparator + fileName;
+			outPutFile = new File(outputDirectory, fileName).getAbsolutePath();
 			CoveageReportAnalysis coveageReportAnalysis = new CoveageReportAnalysis(
 					new DefaultFileHelper());
 			coveageReportAnalysis.execute(coverageFile, outPutFile, excludes,
