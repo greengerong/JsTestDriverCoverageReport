@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import junit.framework.Assert;
 
@@ -38,7 +39,8 @@ public class CoveageReportAnalysisTest {
 						+ "\"window.coverageLimteRate = 50;\"],\"lines\":[{\"hit\":1,\"beHit\":true,\"line\":1},"
 						+ "{\"hit\":0,\"beHit\":false,\"line\":3},{\"hit\":3,\"beHit\":true,\"line\":4},{\"hit\":1,"
 						+ "\"beHit\":true,\"line\":8},{\"hit\":0,\"beHit\":false,\"line\":11}]}];"
-						+ "window.coverageLimteRate = 0;", output);
+						+ "window.coverageLimteRate = 0;window.totalRate = 60.0;",
+				output);
 	}
 
 	@Test
@@ -101,6 +103,14 @@ public class CoveageReportAnalysisTest {
 		coveageReportAnalysis.assertBuild(datas, 30);
 	}
 
+	@Test
+	public void test11() {
+		String str = "C:\\Dev\\work\\Life\\super-online\\trunk\\superonline-webapp\\src\\main\\webapp\\javascript\\3rdparty\\jquery.autosave.min.js";
+		Pattern pattern = Pattern.compile(".*\\\\3rdparty\\\\.*\\.js",
+				Pattern.CASE_INSENSITIVE);
+		Assert.assertTrue(pattern.matcher(str).find());
+	}
+
 	@Test(expected = Exception.class)
 	public void should_exception_when_build_failed() throws Exception {
 		List<CoverageData> datas = new ArrayList<CoverageData>();
@@ -159,11 +169,11 @@ public class CoveageReportAnalysisTest {
 
 	private String[] createCoverageFile1Lines() {
 		return new String[] { "SF:coverage.data.js", "DA: 1,1", "DA: 3,0",
-				"DA: 4,3", "DA: 8,1", "DA: 11,0", "record_end" };
+				"DA: 4,3", "DA: 8,1", "DA: 11,0", "end_of_record" };
 	}
 
 	private String[] createCoverageFile2Lines() {
 		return new String[] { "SF:coverage.data2.js", "DA: 1,1", "DA: 3,0",
-				"DA: 4,3", "DA: 8,1", "DA: 11,0", "record_end" };
+				"DA: 4,3", "DA: 8,1", "DA: 11,0", "end_of_record" };
 	}
 }

@@ -62,7 +62,7 @@ public class JsCoverageReportMojo extends AbstractMojo {
 	public void execute() throws MojoExecutionException {
 		String outPutFile;
 		try {
-			System.out.print("JsCoverageReport maven execute:.");
+			System.out.println("JsCoverageReport maven execute:");
 
 			outPutFile = new File(outputDirectory, fileName).getAbsolutePath();
 			CoveageReportAnalysis coveageReportAnalysis = new CoveageReportAnalysis(

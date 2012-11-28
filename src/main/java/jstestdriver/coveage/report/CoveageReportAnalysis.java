@@ -9,6 +9,7 @@ import org.json.JSONException;
 
 public class CoveageReportAnalysis {
 
+	private static final String END_OF_RECORD = "end_of_record";
 	private final FileHelper fileHelper;
 
 	public CoveageReportAnalysis(FileHelper fileHelper) {
@@ -21,7 +22,8 @@ public class CoveageReportAnalysis {
 		List<String[]> splitFile = splitFile(lines);
 		List<CoverageData> datas = getAllCoverageData(splitFile);
 		exculdesFiles(datas, excludes);
-		writeCoverageDataFile(outPutFile, toJson(datas), limit);
+		double rate = this.getPackageCoverageRate(datas);
+		writeCoverageDataFile(outPutFile, toJson(datas), limit, rate);
 		assertBuild(datas, limit);
 	}
 
@@ -30,7 +32,7 @@ public class CoveageReportAnalysis {
 		double rate = this.getPackageCoverageRate(datas);
 		if (rate < limit) {
 			String message = String
-					.format("Total javaScipt coverage is only %s%% on your project. It is less than requestment %s%%¡£ ",
+					.format("Total javaScipt coverage is only %s%% on your project. It is less than requestment %s%%Â¡Â£ ",
 							rate, limit);
 			System.out.println(message);
 			throw new Exception(message);
@@ -43,27 +45,30 @@ public class CoveageReportAnalysis {
 		}
 
 		for (int i = 0; i < excludes.length; i++) {
-			for (int j = 0; j < datas.size(); j++) {
-				Pattern pattern = Pattern.compile(excludes[i]);
+			for (int j = datas.size() - 1; j > 0; j--) {
+				Pattern pattern = Pattern.compile(excludes[i],
+						Pattern.CASE_INSENSITIVE);
 				if (pattern.matcher(datas.get(j).getFile()).find()) {
 					datas.remove(j);
 				}
 			}
 		}
+
 	}
 
-	private void writeCoverageDataFile(String file, String json, int limit)
-			throws Exception {
-		String source = getCoverageDataSource(json, limit);
+	private void writeCoverageDataFile(String file, String json, int limit,
+			double rate) throws Exception {
+		String source = getCoverageDataSource(json, limit, rate);
 		this.fileHelper.WriteFile(file, new String[] { source });
 	}
 
-	private String getCoverageDataSource(String json, int limit) {
+	private String getCoverageDataSource(String json, int limit, double rate) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("window.coverageData =");
 		sb.append(json);
 		sb.append(";");
 		sb.append(String.format("window.coverageLimteRate = %s;", limit));
+		sb.append(String.format("window.totalRate = %s;", rate));
 		return sb.toString();
 	}
 
@@ -108,7 +113,7 @@ public class CoveageReportAnalysis {
 		for (int i = 0; i < fileLines.length; i++) {
 			String line = fileLines[i];
 			file.add(line);
-			if (line.startsWith("record_end")) {
+			if (line.startsWith(END_OF_RECORD)) {
 				if (file.size() > 0) {
 					list.add(file.toArray(new String[0]));
 				}

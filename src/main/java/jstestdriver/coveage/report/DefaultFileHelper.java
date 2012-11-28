@@ -1,6 +1,7 @@
 package jstestdriver.coveage.report;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -28,10 +29,13 @@ public class DefaultFileHelper implements FileHelper {
 	}
 
 	private String[] innerReadLines(String file) throws Exception {
+		File fileHandler = new File(file);
+		if (!fileHandler.exists()) {
+			return new String[0];
+		}
 		InputStream fis;
 		BufferedReader br;
 		String line;
-		System.out.println("111-" + file);
 		fis = new FileInputStream(file);
 		br = new BufferedReader(new InputStreamReader(fis,
 				Charset.forName("UTF-8")));
@@ -43,5 +47,4 @@ public class DefaultFileHelper implements FileHelper {
 		br.close();
 		return list.toArray(new String[0]);
 	}
-
 }

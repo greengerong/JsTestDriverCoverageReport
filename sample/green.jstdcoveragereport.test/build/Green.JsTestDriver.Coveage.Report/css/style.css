@@ -46,6 +46,17 @@ td.error {
     color: #DD514C;
 }
 
+.alert {
+	font-size: 25px;
+}
+div.success.alert {
+	color: #5EB95E
+}
+
+div.error.alert {
+	color: #5EB95E
+}
+
 input.number {
     width: 50px;
     margin-top: 5px;
@@ -53,10 +64,4 @@ input.number {
 
 .mainContainer {
     padding: 10px;
-}
-
-.back-top {
-    background: #149BDF;
-    width: 25px;
-    position: absolute;
 }
