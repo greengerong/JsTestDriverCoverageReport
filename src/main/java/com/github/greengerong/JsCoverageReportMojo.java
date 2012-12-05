@@ -18,64 +18,60 @@ package com.github.greengerong;
 
 import java.io.File;
 
-import jstestdriver.coveage.report.CoveageReportAnalysis;
+import jstestdriver.coveage.report.CoverageReportAnalysis;
 import jstestdriver.coveage.report.DefaultFileHelper;
 
+import jstestdriver.coveage.report.ResourceCopyImpl;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
 /**
- * 
  * @goal test
- * 
  * @phase process-sources
  */
 public class JsCoverageReportMojo extends AbstractMojo {
-	/**
-	 * out put directory.
-	 * 
-	 * @parameter
-	 * @required
-	 */
-	private File outputDirectory;
-	/**
-	 * coverage file path
-	 * 
-	 * @parameter
-	 * @required
-	 */
-	private String coverageFile;
-	/**
-	 * limit default 0.
-	 * 
-	 * @parameter
-	 */
-	private int limit = 0;
-	/**
-	 * excludes js file.
-	 * 
-	 * @parameter
-	 */
-	private String[] excludes;
-	private String fileName = "coverage.data.js";;
+    /**
+     * out put directory.
+     *
+     * @parameter
+     * @required
+     */
+    private File outputDirectory;
+    /**
+     * coverage file path
+     *
+     * @parameter
+     * @required
+     */
+    private String coverageFile;
+    /**
+     * limit default 0.
+     *
+     * @parameter
+     */
+    private int limit = 0;
+    /**
+     * excludes js file.
+     *
+     * @parameter
+     */
+    private String[] excludes;
 
-	public void execute() throws MojoExecutionException {
-		String outPutFile;
-		try {
-			System.out.println("JsCoverageReport maven execute:");
+    public void execute() throws MojoExecutionException {
+        String outPutFile;
+        try {
+//            getLog().info("JsCoverageReport maven execute:");
+            CoverageReportAnalysis coverageReportAnalysis = new CoverageReportAnalysis(
+                    new DefaultFileHelper(),new ResourceCopyImpl());
+            coverageReportAnalysis.execute(coverageFile, outputDirectory, excludes,
+                    limit);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new MojoExecutionException(e.getMessage());
+        }
 
-			outPutFile = new File(outputDirectory, fileName).getAbsolutePath();
-			CoveageReportAnalysis coveageReportAnalysis = new CoveageReportAnalysis(
-					new DefaultFileHelper());
-			coveageReportAnalysis.execute(coverageFile, outPutFile, excludes,
-					limit);
+        getLog().info(String.format("%s already finished(%s).", CoverageReportAnalysis.COVERAGE_FILE_NAME,
+                new File(outputDirectory, CoverageReportAnalysis.COVERAGE_FILE_NAME).getAbsolutePath()));
 
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw new MojoExecutionException(e.getMessage());
-		}
-		System.out.print(String.format("%s already finished(%s).", fileName,
-				outPutFile));
-
-	}
+    }
 }

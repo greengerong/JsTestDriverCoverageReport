@@ -9,10 +9,10 @@ public class Main {
 		int limit = 60;
 		String[] excludes = null;
 
-		CoveageReportAnalysis coveageReportAnalysis = new CoveageReportAnalysis(
-				new DefaultFileHelper());
+		CoverageReportAnalysis coveageReportAnalysis = new CoverageReportAnalysis(
+				new DefaultFileHelper(), new ResourceCopyImpl());
 		coveageReportAnalysis
-				.execute(coverageFile, outPutFile, excludes, limit);
+				.execute(coverageFile, null, excludes, limit);
 	}
 
 	public Main() {

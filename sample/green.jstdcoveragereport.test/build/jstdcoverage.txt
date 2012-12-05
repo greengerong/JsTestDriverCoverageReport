@@ -1,4 +1,4 @@
-SF:C:\project\java\green.jstdcoveragereport.test\build\test.js
+SF:E:\Project\OpenSource\github\JsTestDriverCoverageReport\sample\green.jstdcoveragereport.test\build\test.js
 DA: 2,1
 DA: 4,0
 DA: 5,0
@@ -21,10 +21,10 @@ DA: 20,1
 DA: 21,1
 DA: 22,1
 DA: 23,1
-record_end
-SF:C:\project\java\green.jstdcoveragereport.test\build\test1.js
+end_of_record
+SF:E:\Project\OpenSource\github\JsTestDriverCoverageReport\sample\green.jstdcoveragereport.test\build\test1.js
 DA: 1,1
 DA: 3,0
 DA: 4,3
 DA: 11,0
-record_end
+end_of_record
