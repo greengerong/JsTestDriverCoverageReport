@@ -1,70 +1,63 @@
 package jstestdriver.coveage.report;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Enumeration;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
+import java.io.*;
+import java.nio.charset.Charset;
 
 public class ResourceCopyImpl implements ResourceCopy {
 
     @Override
-    public void copy(String resource, String destination) throws IOException {
-        copy(this.getClass(), resource, destination);
+    public void copy(String destination) throws IOException {
+        copy(this.getClass(), destination);
     }
 
     @Override
-    public void copy(Class resourceClass, String resource, String destination) throws IOException {
-        byte[] bytes = readReSources(resourceClass, resource);
-        System.out.println("--------"+bytes.length);
-        File destinationZipFile = writeResources(resource, destination, bytes);
-        unZipResources(destination, destinationZipFile);
-        System.gc();//if remove,it can not delete zip fie;
-        destinationZipFile.delete();
+    public void copy(Class resourceClass, String destination) throws IOException {
+        createAllDirs(destination);
+        createFiles(resourceClass, destination);
     }
 
-    private void unZipResources(String destination, File destinationZipFile) throws IOException {
-        ZipFile zf = new ZipFile(destinationZipFile.getPath());
-        Enumeration entity = zf.entries();
-        while (entity.hasMoreElements()) {
-            ZipEntry ze = (ZipEntry) entity.nextElement();
-            if (ze.isDirectory()) {
-                new File(destination, ze.getName()).mkdirs();
-            } else {
-                writeUnZipEntry(destination, zf, ze);
-            }
+    private void createFiles(Class resourceClass, String destination) throws IOException {
+        createFile(resourceClass, destination, "report/css/bootstrap.min.css");
+        createFile(resourceClass, destination, "report/css/style.css");
+        createFile(resourceClass, destination, "report/img/glyphicons-halflings-white.png");
+        createFile(resourceClass, destination, "report/img/glyphicons-halflings.png");
+        createFile(resourceClass, destination, "report/script/angular.min.js");
+        createFile(resourceClass, destination, "report/script/bootstrap.min.js");
+        createFile(resourceClass, destination, "report/script/jquery.min.js");
+        createFile(resourceClass, destination, "report/script/coverage_report.js");
+        createFile(resourceClass, destination, "report/script/underscore-min.js");
+        createFile(resourceClass, destination, "report/Report.html");
+    }
+
+    private void createFile(Class resourceClass, String destination, String resource) throws IOException {
+        InputStream resourceAsStream = resourceClass.getClassLoader().getResourceAsStream(resource);
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(resourceAsStream,
+                Charset.forName("UTF-8")));
+        File file = new File(destination, resource);
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        String content = "";
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            content += line + System.getProperty("line.separator");
         }
-    }
+        bufferedReader.close();
+        resourceAsStream.close();
 
-    private void writeUnZipEntry(String destination, ZipFile zf, ZipEntry ze) throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File(destination, ze.getName()));
-        InputStream inputStream = zf.getInputStream(ze);
-        fileOutputStream.write(getFileBytes(inputStream));
-        inputStream.close();
+        fileOutputStream.write(content.getBytes());
         fileOutputStream.flush();
         fileOutputStream.close();
     }
 
-    private File writeResources(String resource, String destination, byte[] bytes) throws IOException {
-        File destinationZipFile = new File(destination, resource);
-        FileOutputStream zipOutPut = new FileOutputStream(destinationZipFile);
-        zipOutPut.write(bytes);
-        zipOutPut.flush();
-        zipOutPut.close();
-        return destinationZipFile;
+    private void createAllDirs(String destination) {
+        mkdirs(destination, "report/css");
+        mkdirs(destination, "report/img");
+        mkdirs(destination, "report/script");
     }
 
-    private byte[] readReSources(Class resourceClass, String resource) throws IOException {
-        InputStream resourceAsStream = resourceClass.getClassLoader().getResourceAsStream(resource);
-        return getFileBytes(resourceAsStream);
-    }
-
-    private byte[] getFileBytes(InputStream inputStream) throws IOException {
-        byte[] bytes = new byte[inputStream.available()];
-        inputStream.read(bytes);
-        inputStream.close();
-        return bytes;
+    private void mkdirs(String destination, String dir) {
+        File file = new File(destination, dir);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
     }
 }

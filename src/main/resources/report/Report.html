@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="coverage">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="script/angular.min.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script/underscore-min.js"></script>
+    <script type="text/javascript">
+        window.underscore = window._;
+    </script>
+    <script type="text/javascript" src="coverage.data.js"></script>
+    <script type="text/javascript" src="script/coverage_report.js"></script>
+</head>
+<body ng-controller="coverage_report">
+<a name="top"></a>
+
+<div ng-switch on="isTotalCoverage" class="mainContainer">
+    <div ng-switch-when="false">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="Report.html"> All Report </a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <table
+                    class="table table-hover table-condensed table-striped none-border"
+                    rate="{{getCoverageData(currentFile)}}">
+                <tbody>
+                <tr ng-repeat="code in currentFile.codes"
+                    class="none-border ng-cloak">
+                    <td class="tr-line">{{$index + 1}}</td>
+                    <td>
+                        <pre class="none-border {{hasPassThought($index + 1);}}">{{code}}</pre>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--   -->
+    <div ng-switch-default>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a><label for="coverageLimteRate">Coverage
+                        Limte:</label></a></li>
+                    <li><input id="coverageLimteRate" type="number" ng-max="100"
+                               ng-min="0" ng-maxlength="2" class="span2 number"
+                               ng-model="coverageLimteRate"/></li>
+                </ul>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <caption>
+                <h2>coverage report by green</h2>
+            </caption>
+            <thead>
+            <tr>
+                <td colspan="3">
+                    <div class="alert {{getTotalStatus();}}">
+                        Total coverage rate:<span>{{totalRate | number:2}}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tr-file"><h4>file</h4></td>
+                <td><h4>coverage</h4></td>
+                <td class="tr-coverage-chart"></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="fileCoverage in coverageData"
+                rate="{{getCoverageData(fileCoverage)}}"
+                class="{{getStatus(fileCoverage);}}">
+                <td><a href="?file={{fileCoverage.file}}" class="ng-cloak">{{fileCoverage.file}}</a></td>
+                <td class="{{getStatus(fileCoverage);}}">
+                    <h4 class="ng-cloak">{{fileCoverage.rate}}&nbsp;%</h4>
+                </td>
+                <td><a href="?file={{fileCoverage.file}}">
+                    <div class="progress">
+                        <div class="bar bar-{{getStatus(fileCoverage);}}"
+                             ng-style="getProgressWidth(fileCoverage)"></div>
+                    </div>
+                </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--<div class="back-top" back-top="">-->
+<!--<a href="#top"><span>Top</span></a></div>-->
+</body>
+</html>

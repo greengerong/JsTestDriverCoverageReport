@@ -65,7 +65,7 @@ public class CoverageReportAnalysis {
                                        double rate) throws Exception {
         String source = getCoverageDataSource(json, limit, rate);
         if (this.resourceCopy != null) {
-            this.resourceCopy.copy(REPORT_RESOURCE_NAME, outputDirectory.getAbsolutePath());
+            this.resourceCopy.copy(outputDirectory.getAbsolutePath());
         }
         this.fileHelper.WriteFile(new File(outputDirectory, COVERAGE_FILE_NAME).getAbsolutePath(), new String[]{source});
     }

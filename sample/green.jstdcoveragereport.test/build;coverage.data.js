@@ -1,1 +1,0 @@
-window.coverageData =[];window.coverageLimteRate = 60;
