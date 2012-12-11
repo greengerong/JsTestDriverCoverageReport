@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6e82e6-1e48-47b0-9916-c1af7f63b07f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/Report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/script/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/script/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/script/coverage_report.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/script/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report/script/underscore-min.js" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Spec\cases\coverage_report_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Spec\jasmine\jasmine-html.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Spec\jasmine\jasmine.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Spec\jasmine\jasmine.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Spec\jasmine\jasmine_favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Spec\runner.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\coverage.data.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\script\angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\script\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\sample\green.jstdcoveragereport.test\build;coverage.data.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\sample\green.jstdcoveragereport.test\build\report.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\src\main\resources\report.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/CoverageReportAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/CoverageReportAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/ResourceCopy.java" afterPath="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/ResourceCopy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/ResourceCopyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/ResourceCopyImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/ResourceCopyTest.java" afterPath="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/ResourceCopyTest.java" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\Report.html" afterPath="$PROJECT_DIR$/src/main/resources/report/Report.html" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\css\style.css" afterPath="$PROJECT_DIR$/src/main/resources/report/css/style.css" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\img\glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/src/main/resources/report/img/glyphicons-halflings-white.png" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\img\glyphicons-halflings.png" afterPath="$PROJECT_DIR$/src/main/resources/report/img/glyphicons-halflings.png" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\script\bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/resources/report/script/bootstrap.min.js" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\script\coverage_report.js" afterPath="$PROJECT_DIR$/src/main/resources/report/script/coverage_report.js" />
-      <change type="MOVED" beforePath="E:\Project\OpenSource\github\JsTestDriverCoverageReport\Green.JsTestDriver.Coveage.Report\script\underscore-min.js" afterPath="$PROJECT_DIR$/src/main/resources/report/script/underscore-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoverageReportAnalysisTest.java" afterPath="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoverageReportAnalysisTest.java" />
     </list>
     <ignored path="JSCoverageReport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,10 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/green.jstdcoveragereport.test/pom.xml">
+      <file leaf-file-name="CoverageReportAnalysisTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoverageReportAnalysisTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="24" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
+            <state line="45" column="99" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.5495652">
               <folding />
             </state>
           </provider>
@@ -111,37 +79,29 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="25" selection-start="393" selection-end="405" vertical-scroll-proportion="0.0">
+            <state line="61" column="56" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceCopyImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/ResourceCopyImpl.java">
+      <file leaf-file-name="FileHelperMock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/FileHelperMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="38" selection-start="2141" selection-end="2141" vertical-scroll-proportion="-11.24">
+            <state line="16" column="28" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultFileHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/DefaultFileHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="20" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1181#1189#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Report.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/report/Report.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="72" selection-start="235" selection-end="235" vertical-scroll-proportion="-3.392857">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coverage_report.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/report/script/coverage_report.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="37" selection-start="414" selection-end="414" vertical-scroll-proportion="0.73429954">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,10 +131,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/greengerong/JsCoverageReportMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/CoverageReportAnalysis.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/FileHelperMock.java" />
         <option value="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoveageReportAnalysisTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoverageReportAnalysisTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sample/green.jstdcoveragereport.test/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/ResourceCopyTest.java" />
         <option value="$PROJECT_DIR$/Green.JsTestDriver.Coveage.Report/script/coverage_report.js" />
@@ -182,6 +139,9 @@
         <option value="$PROJECT_DIR$/Green.JsTestDriver.Coveage.Report/Report.html" />
         <option value="$PROJECT_DIR$/src/main/resources/report/Report.html" />
         <option value="$PROJECT_DIR$/src/main/resources/report/script/coverage_report.js" />
+        <option value="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/FileHelperMock.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoverageReportAnalysisTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -215,9 +175,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -323,30 +283,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSCoverageReport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSCoverageReport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,6 +305,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSCoverageReport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JsTestDriverCoverageReport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSCoverageReport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSCoverageReport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -376,19 +350,20 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="119" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="125" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="119" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="119" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="125" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="918" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="918" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="125" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="125" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -405,8 +380,8 @@
     <property name="options.lastSelected" value="Errors" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -422,7 +397,7 @@
       <recent name="jstestdriver.coveage.report.CoverageReportAnalysis" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ResourceCopyTest.Test">
+  <component name="RunManager" selected="JUnit.CoverageReportAnalysisTest.test">
     <configuration default="false" name="CoverageReportAnalysisTest.test" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -598,24 +573,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -642,6 +599,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -736,28 +711,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="22" width="1280" height="723" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26243567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981017" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24699828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24584718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939255" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23614275" sideWeight="0.75814754" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24185249" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2353896" sideWeight="0.71428573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2857143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26243567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -837,30 +812,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/report/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="391" selection-end="391" vertical-scroll-proportion="-1.2566137">
-          <folding />
-        </state>
+        <state line="11" column="36" selection-start="391" selection-end="391" vertical-scroll-proportion="-1.2566137" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/report/script/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/green.jstdcoveragereport.test/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="393" selection-end="405" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/FileHelper.java">
@@ -868,60 +825,66 @@
         <state line="7" column="29" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.6.0_21/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="11" selection-start="11249" selection-end="11249" vertical-scroll-proportion="-18.05291">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.6.0_21/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="11" selection-start="7453" selection-end="7453" vertical-scroll-proportion="-7.685422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/greengerong/JsCoverageReportMojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="30" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.04859335">
+        <state line="57" column="30" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.04859335" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/report/script/coverage_report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="48" selection-start="705" selection-end="705" vertical-scroll-proportion="-1.1391305">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/DefaultFileHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/report/Report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="713" selection-end="713" vertical-scroll-proportion="0.6112532">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.6.0_21/src.zip!/java/io/BufferedWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1689" selection-end="1689" vertical-scroll-proportion="0.589372">
+        <state line="5" column="72" selection-start="235" selection-end="235" vertical-scroll-proportion="0.027223231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/ResourceCopyImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="38" selection-start="2141" selection-end="2141" vertical-scroll-proportion="-11.24">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/report/Report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="72" selection-start="235" selection-end="235" vertical-scroll-proportion="-3.392857">
+        <state line="52" column="35" selection-start="2355" selection-end="2361" vertical-scroll-proportion="1.3304348">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/report/script/coverage_report.js">
+    <entry file="file://$PROJECT_DIR$/sample/green.jstdcoveragereport.test/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="37" selection-start="414" selection-end="414" vertical-scroll-proportion="0.73429954">
+        <state line="23" column="35" selection-start="785" selection-end="791" vertical-scroll-proportion="0.5304348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstestdriver/coveage/report/DefaultFileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="20" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1181#1189#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/FileHelperMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="56" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jstestdriver/coveage/report/CoverageReportAnalysisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="99" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.5495652">
           <folding />
         </state>
       </provider>
