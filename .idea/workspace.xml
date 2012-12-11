@@ -77,7 +77,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="52" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.4695652">
+            <state line="56" column="118" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.57391304">
               <folding />
             </state>
           </provider>
@@ -729,7 +729,11 @@
       <created>1355211623197</created>
       <updated>1355211623197</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add java doc">
+      <created>1355211651110</created>
+      <updated>1355211651110</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -897,7 +901,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="52" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.4695652">
+        <state line="56" column="118" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.57391304">
           <folding />
         </state>
       </provider>
