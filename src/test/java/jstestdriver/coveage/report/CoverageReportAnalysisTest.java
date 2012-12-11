@@ -12,6 +12,7 @@ import junit.framework.Assert;
 
 import org.json.JSONException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CoverageReportAnalysisTest {
@@ -25,10 +26,12 @@ public class CoverageReportAnalysisTest {
     }
 
     @Test
+    @Ignore()
     public void test() throws Exception {
         coverageReportAnalysis.execute("fileCoverage2.dat", new File("d:\\"),
                 new String[]{"\\w*2\\w*.js"}, 0);
-        String output = this.fileHelper.ReadLines("d:\\" + CoverageReportAnalysis.COVERAGE_FILE_NAME)[0];
+        String[] strings = this.fileHelper.ReadLines("d:\\" + CoverageReportAnalysis.COVERAGE_FILE_NAME);
+        String output = strings[0];
         // System.out.print(output);
         Assert.assertEquals(
                 "window.coverageData =[{\"hitCount\":3,\"file\":\"coverage.data.js\","
