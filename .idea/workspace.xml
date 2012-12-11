@@ -733,7 +733,11 @@
       <created>1355211651110</created>
       <updated>1355211651110</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add java doc">
+      <created>1355211674459</created>
+      <updated>1355211674459</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
